@@ -8,7 +8,9 @@ const searchBtn = () => {
       <p>Please Search Any Meal</p>
     `;
     const mealContainer = document.getElementById("meal-container");
+    const mealDetails = document.getElementById("meal-details");
     mealContainer.textContent = "";
+    mealDetails.textContent = "";
   } else {
     errorMessage.textContent = "";
     fetch(url)
@@ -20,7 +22,9 @@ const searchBtn = () => {
 
 const displayMeals = (meals) => {
   const mealContainer = document.getElementById("meal-container");
+  const mealDetails = document.getElementById("meal-details");
   mealContainer.textContent = "";
+  mealDetails.textContent = "";
   meals.forEach((meal) => {
     const div = document.createElement("div");
     div.classList.add("col");
